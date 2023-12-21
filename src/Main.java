@@ -181,12 +181,17 @@ public class Main {
         //содержащий полученные факториалы.
         int[] arrForFactorial = new int[arr.length];
         for (int i = 0; i < arrForFactorial.length; i++) {
-            int temp = 1;
-            for (int j = 0; j < arr[i]; j++) {
-                temp = temp * arr[j];
-            }
-            arrForFactorial[i] = temp;
+            arrForFactorial[i] = returnFact(arr[i]);
         }
+
         System.out.println(Arrays.toString(arrForFactorial));
+    }
+
+    public static int returnFact (int n) {
+        if (n == 1) {
+            return n;
+        } else if (n == 2) {
+            return n;
+        } else return returnFact(n - 1) * n;
     }
 }
